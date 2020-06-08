@@ -1,18 +1,26 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 :root {
-  font-size: 16px;
   --primary: hsl(257, 40%, 49%);
+  font-size: 20px;
 }
 
 body {
-  margin: 0;
-  background-color: var(--primary);
-  color: #fff;
   font-family: "Open Sans", serif;
+  color: #fff;
+  background: url(/assets/images/bg-mobile.svg) var(--primary);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media screen and (min-width: 1240px) {
+    background: url(/assets/images/bg-desktop.svg) var(--primary);
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+  }
 }
 h1,
 h2,
@@ -20,7 +28,19 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
   font-family: "Poppins", serif;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 1240px) {
+    width: 90%;
+  }
 }

@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+  padding: 1.75rem;
+  text-align: center;
+  @media screen and (min-width: 1240px) {
+    text-align: right;
+  }
+  &__icon {
+    color: #fff;
+    padding: 0.75em;
+    margin-left: 0.25rem;
+    border-radius: 50%;
+    border: 1px solid;
+  }
+}
